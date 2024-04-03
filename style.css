@@ -15,6 +15,7 @@ body {
   background-color: hsl(0, 0%, 98%);
   padding: 2rem;
   margin: 3rem auto;
+  min-width: 375px;
 }
 
 .titleContainer {
@@ -65,7 +66,7 @@ body {
   border-top: 0.3rem solid hsl(212, 86%, 64%);
 }
 
-.title {
+.sectionTitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
@@ -82,4 +83,81 @@ body {
   position: absolute;
   top: 135px;
   right: 25px;
+}
+
+@media (min-width: 1000px) {
+  .titleContainer {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 30rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .poweredBy {
+    font-weight: 600;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: hsl(229, 6%, 66%);
+  }
+
+  .featureSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mainContainer {
+    display: grid;
+    grid-template-columns: 18.75rem 1.25rem 18.75rem 1.25rem 300px;
+    grid-template-rows: 7rem 7rem 1.25rem 7rem 7rem;
+  }
+
+  .top {
+    width: 18.75rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .right {
+    width: 18.75rem;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: -5;
+    grid-row-end: -3;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  .bottom {
+    width: 18.75rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: -3;
+    grid-row-end: -1;
+  }
+  .left {
+    width: 18.75rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
 }
